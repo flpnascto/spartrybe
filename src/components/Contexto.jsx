@@ -1,4 +1,5 @@
 import React from 'react';
+import Motivacao from './Motivacao';
 
 class Contexto extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Contexto extends React.Component {
          <p>De acordo com o seu perfil, conservador, moderado ou agressivo e seus objetivos futuros
          apresentamos uma carteira completa e balanceada para suas aplicações. E com um clique, pronto,
          o seus recursos serão aplicados.</p>
+         <Motivacao />
       </div>
     );
   }
