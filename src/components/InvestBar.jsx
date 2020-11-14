@@ -3,16 +3,17 @@ import React from 'react';
 import PropTrybes from 'prop-types';
 
 class InvestBar extends React.Component {
-  imputSearch() {
-    const { searchText, onSearchTextChange } = this.props;
+  inputSearch() {
+    const { nameFilter, onNameChange } = this.props;
     return (
       <label htmlFor="search-text" data-testid="text-input-label">
-        Inclua o texto:
+        Nome:
         <input
+          className="xablau"
           type="text"
-          name="search-text"
-          value={searchText}
-          OnChange={onSearchTextChange}
+          name="name"
+          value={nameFilter}
+          onChange={onNameChange}
           data-testid="text-input"
           data-key="searchText"
         />
@@ -20,46 +21,92 @@ class InvestBar extends React.Component {
     );
   }
 
-  bookmarked() {
-    const { bookmarkedOnly, onBookmarkedChange } = this.props;
+  selectInvestorType() {
+    const { perfilFilter, onCategoryChange } = this.props;
     return (
-      <label htmlFor="bookmarked-change" data-testid="checkbox-input-label">
-        Mostrar somente favoritos
-        <input
-          type="checkbox"
-          name="bookmarked-change"
-          OnChange={onBookmarkedChange}
-          data-testid="checkbox-input"
-          data-key="bookmarkedOnly"
-          checked={bookmarkedOnly}
-        />
+      <label htmlFor="select-input" data-testid="select-input-label">
+        Perfil:
+        <select
+          name="perfil"
+          value={perfilFilter}
+          onChange={onCategoryChange}
+          data-testid="select-input"
+          data-key="selectedGenre"
+        >
+          <option selected value="all" data-testid="select-option">
+            Todos
+          </option>
+          <option value="conservador" data-testid="select-option">
+            Conservador
+          </option>
+          <option value="moderado" data-testid="select-option">
+            Moderado
+          </option>
+          <option value="agressivo" data-testid="select-option">
+            Agressivo
+          </option>
+        </select>
       </label>
     );
   }
 
-  selectedGenre() {
-    const { selectedGenre, onSelectedGenreChange } = this.props;
+  category() {
+    const { categoryFilter, onCategoryChange } = this.props;
     return (
-      <label htmlFor="select-imput" data-testid="select-input-label">
-        Filtrar por Perfil
+      <label htmlFor="select-input" data-testid="select-input-label">
+        Categoria:
         <select
-          name="selected-genre"
-          value={selectedGenre}
-          OnChange={onSelectedGenreChange}
+          name="categoria"
+          value={categoryFilter}
+          onChange={onCategoryChange}
           data-testid="select-input"
           data-key="selectedGenre"
         >
-          <option value="" data-testid="select-option">
-            Todos
+          <option selected value="all" data-testid="select-option">
+            Todas
           </option>
-          <option value="action" data-testid="select-option">
-            conservador
+          <option value="renda Fixa" data-testid="select-option">
+            Renda Fixa
           </option>
-          <option selected value="comedy" data-testid="select-option">
-            Moderado
+          <option value="multimercado" data-testid="select-option">
+            Multimercado
           </option>
-          <option value="thriller" data-testid="select-option">
-            Agressivo
+          <option value="renda variavel" data-testid="select-option">
+            Renda Variável
+          </option>
+
+          <option value="internacional" data-testid="select-option">
+            Internacional
+          </option>
+
+          <option value="alternativos" data-testid="select-option">
+            Alternativos
+          </option>
+        </select>
+      </label>
+    );
+  }
+
+  timeRange() {
+    const { horizonteFilter, onCategoryChange } = this.props;
+    return (
+      <label htmlFor="select-input" data-testid="select-input-label">
+        Horizonte:
+        <select
+          name="horizonte"
+          value={horizonteFilter}
+          onChange={onCategoryChange}
+          data-testid="select-input"
+          data-key="selectedGenre"
+        >
+          <option selected value="curto prazo" data-testid="select-option">
+            Curto Prazo
+          </option>
+          <option value="medio prazo" data-testid="select-option">
+            Médio Prazo
+          </option>
+          <option value="longo prazo" data-testid="select-option">
+            Longo Prazo
           </option>
         </select>
       </label>
@@ -75,8 +122,9 @@ class InvestBar extends React.Component {
           data-testid="search-bar-form"
         >
           {this.inputSearch()}
-          {this.bookmarked()}
-          {this.selectedGenre()}
+          {this.selectInvestorType()}
+          {this.category()}
+          {this.timeRange()}
         </form>
       </div>
     );

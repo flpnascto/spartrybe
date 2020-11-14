@@ -7,7 +7,7 @@ class InvestList extends Component {
     const { portfolios } = this.props
     return(
       <div>
-        {portfolios.map(portfolio => <PortifolioCard carteiras={portfolio}/>)}
+        {portfolios.map(portfolio => <PortifolioCard carteiras={portfolio} key={portfolio.id} />)}
       </div>
     )
   }
