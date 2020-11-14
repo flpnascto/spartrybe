@@ -23,18 +23,18 @@ class InvestBar extends React.Component {
   }
 
   selectInvestorType() {
-    const { perfilFilter, onCategoryChange } = this.props;
+    const { perfilFilter, onPerfilChange } = this.props;
     return (
       <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
         Perfil:
         <select
           name="perfil"
           value={perfilFilter}
-          onChange={onCategoryChange}
+          onChange={onPerfilChange}
           data-testid="select-input"
           data-key="selectedGenre"
         >
-          <option selected value="all" data-testid="select-option">
+          <option selected value="" data-testid="select-option">
             Todos
           </option>
           <option value="conservador" data-testid="select-option">
@@ -63,7 +63,7 @@ class InvestBar extends React.Component {
           data-testid="select-input"
           data-key="selectedGenre"
         >
-          <option selected value="all" data-testid="select-option">
+          <option selected value="" data-testid="select-option">
             Todas
           </option>
           <option value="renda fixa" data-testid="select-option">
@@ -89,18 +89,21 @@ class InvestBar extends React.Component {
   }
 
   timeRange() {
-    const { horizonteFilter, onCategoryChange } = this.props;
+    const { horizonteFilter, onHorizonteChange } = this.props;
     return (
       <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
         Horizonte:
         <select
           name="horizonte"
           value={horizonteFilter}
-          onChange={onCategoryChange}
+          onChange={onHorizonteChange}
           data-testid="select-input"
           data-key="selectedGenre"
         >
-          <option selected value="curto prazo" data-testid="select-option">
+          <option selected value="" data-testid="select-option">
+            Todos
+          </option>
+          <option value="curto prazo" data-testid="select-option">
             Curto Prazo
           </option>
           <option value="medio prazo" data-testid="select-option">

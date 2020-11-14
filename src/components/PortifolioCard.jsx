@@ -11,14 +11,14 @@ class PortifolioCard extends React.Component {
   // amarelo -> moderado
   // laranja -> agressivo
   render() {
-    const { carteiras } = this.props;
+    const { carteira } = this.props;
     const {
       img,
       name,
       author,
       rating,
       ranking,
-     } = carteiras;
+     } = carteira;
     return (
       <div className="card" data-testid="card">
         <img alt="cover" className="card-image" src={img} />
@@ -31,6 +31,6 @@ class PortifolioCard extends React.Component {
   }
 }
 
-PortifolioCard.propTypes = { carteiras: PropTypes.arrayOf.isRequired };
+PortifolioCard.propTypes = { carteira: PropTypes.arrayOf.isRequired };
 
 export default PortifolioCard;

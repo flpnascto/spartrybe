@@ -1,55 +1,79 @@
-import React, { Component } from 'react'
+import React from 'react'
 import InvestList  from './InvestList';
 import InvestBar from './InvestBar'
 
-class InvestLibrary extends Component {
+class InvestLibrary extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.onNameChange = this.onNameChange.bind(this);
+    this.onPerfilChange = this.onPerfilChange.bind(this);
+    this.onCategoryChange = this.onCategoryChange.bind(this);
+    this.onHorizonteChange = this.onHorizonteChange.bind(this);
+    this.categoryFilter = this.categoryFilter.bind(this);
+    this.filteredPortifolios = this.filteredPortifolios.bind(this);
+
+    const { carteiras } = props;
+
     this.state = {
       name: '',
       perfil: '',
       categoria: '',
       horizonte: '',
-      portfolioFilter: this.props.portfolios,
+      carteiras,
     }
   }
 
-  onNameChange = (event) => {
-    const { portfolios } = this.props
-    const { value, name } = event.target
-    const filterByName = portfolios.filter(portfolio => portfolio.name === value)
-    this.setState(() => ({ 
-      [name]: value,
-      portfolioFilter: filterByName,
-    }))
+  onNameChange(event) {
+    this.setState({ name: event.target.value})
   }
 
-  onCategoryChange = (event) => {
-    const { value, name } = event.target
-    const { portfolios } = this.props
-    const filtered = portfolios.filter((portfolio) => portfolio.category.toString().indexOf(value) >= 0)
-    console.log(filtered)
-    console.log(value)
-    this.setState(() => ({ 
-      [name]: value,
-      portfolioFilter: filtered,
-    }))
-
+  onPerfilChange(event) {
+    this.setState({ perfil: event.target.value });
   }
+
+  onCategoryChange(event) {
+    this.setState({ categoria: event.target.value });
+  }
+
+  onHorizonteChange(event) {
+    this.setState({ horizonte: event.target.value });
+  }
+
+  categoryFilter(carteira, categoria) {
+    if (categoria === '') {
+      return carteira
+    }
+
+    return (carteira.category).find(e => e === categoria.toLowerCase())
+  }
+
+  filteredPortifolios({ name, perfil , categoria, horizonte, carteiras}) {
+    return carteiras
+      .filter((carteira) => this.categoryFilter(carteira, perfil))
+      .filter((carteira) => this.categoryFilter(carteira, categoria))
+      .filter((carteira) => this.categoryFilter(carteira, horizonte))
+      .filter((carteira) => ((carteira.name).toLowerCase())
+        .includes((name).toLowerCase()) || name === '');
+  }
+
+
   render() {
     const { name, perfil, categoria, horizonte } = this.state
-    const { portfolioFilter } = this.state
+    // const { portfolioFilter } = this.state
     return(
       <div>
         <InvestBar 
           nameFilter={name}
           onNameChange={this.onNameChange}
           perfilFilter={perfil}
+          onPerfilChange={this.onPerfilChange}
           categoryFilter={categoria}
-          horizonteFilter={horizonte}
           onCategoryChange={this.onCategoryChange}
+          horizonteFilter={horizonte}
+          onHorizonteChange={this.onHorizonteChange}          
         /> 
-        <InvestList portfolios={portfolioFilter} />
+        <InvestList carteiras={this.filteredPortifolios(this.state)} />
 
       </div>
     )
