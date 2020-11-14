@@ -7,3 +7,8 @@
   padding-top: 10px;
   padding-bottom: 15px;
 }
+
+.profit-table-column {
+  padding: 5px;
+  text-align: left;
+}
