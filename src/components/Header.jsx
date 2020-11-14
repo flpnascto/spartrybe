@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 class Header extends Component {
   render() {
     return(
-      <div>
-        <h1>Órama - InvestiFy</h1>
+      <div className="header-content">
+        <img alt="logo" src="https://www.orama.com.br/static/img/logos/orama.svg" />
       </div>
     )
   }
