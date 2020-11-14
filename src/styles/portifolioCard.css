@@ -1,0 +1,24 @@
+.card {
+  background-color: lightgray;
+  border: 2px solid darkgrey;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  min-width: 100vh;
+}
+
+.card-image {
+  font-size: x-large;
+  padding-bottom: 5px;
+}
+
+.card-name {
+  margin: 5px;
+}
+
+.card-author {
+  font-style: italic;
+  padding-bottom: 3px;
+}

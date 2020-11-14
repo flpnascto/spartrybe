@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Rating from './Rating';
 import Ranking from './Ranking';
 
+import '../src/styles/portifolioCard.css'
+
 class PortifolioCard extends React.Component {
   // criar função para alterar a cor da borda do card de acordo com a categoria
   // azul -> conservador
