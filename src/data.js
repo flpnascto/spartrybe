@@ -3,7 +3,7 @@ const carteiras = [
     id: 'primeiraAbCd01',
     name: 'Cauteloso',
     img: 'images/carteira_bg_a.png',
-    category: ['conservador', 'medio prazo'],
+    category: ['conservador', 'medio prazo', 'multimercado'],
     author: 'Órama',
     rating: {
       rate: 4.3,
@@ -57,7 +57,7 @@ const carteiras = [
     id: 'primeiraAbCd03',
     name: 'Espartano',
     img: 'images/carteira_bg_a.png',
-    category: ['agressivo', 'longo prazo'],
+    category: ['agressivo', 'longo prazo', 'renda fixa'],
     author: 'Órama',
     rating: {
       rate: 4.3,
