@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Rating from './Rating';
-// import Ranking from './Ranking';
+import Ranking from './Ranking';
 
 import '../styles/portifolioCard.css'
 
@@ -24,7 +24,7 @@ class PortifolioCard extends React.Component {
         <img alt="cover" className="card-image" src={img} />
         <h4 data-testid="card-name" className="card-name">{name}</h4>
         <Rating rating={rating} />
-        {/* <Ranking ranking={ranking} /> */}
+        <Ranking ranking={ranking} />
         <div className='card-author'>{author}</div>
       </div>
     );
