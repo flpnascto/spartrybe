@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <InvestLibrary portfolio={Portfolio}/>
-      <Menu />
-      <Conteudo />
+      <InvestLibrary portfolios={Portfolio}/>
+      {/* <Menu />
+      <Conteudo /> */}
     </div>
   );
 }
