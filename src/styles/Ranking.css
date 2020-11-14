@@ -1,0 +1,9 @@
+.ranking {
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
