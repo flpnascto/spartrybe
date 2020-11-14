@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Rating from './Rating';
-import Ranking from './Ranking';
+// import Rating from './Rating';
+// import Ranking from './Ranking';
 
 import '../src/styles/portifolioCard.css'
 
@@ -23,8 +23,8 @@ class PortifolioCard extends React.Component {
       <div className="card" data-testid="card">
         <img alt="cover" className="card-image" src={img} />
         <h4 data-testid="card-name" className="card-name">{name}</h4>
-        <Rating rating={rating} />
-        <Ranking ranking={ranking} />
+        {/* <Rating rating={rating} /> */}
+        {/* <Ranking ranking={ranking} /> */}
         <div className='card-author'>{author}</div>
       </div>
     );

@@ -2,7 +2,7 @@ const carteiras = [
   {
     id: 'primeiraAbCd01',
     name: 'Cauteloso',
-    img: './src/images/carteira_bg_a.png',
+    img: 'images/carteira_bg_a.png',
     category: ['conservador', 'medio prazo'],
     author: 'Órama',
     rating: {
