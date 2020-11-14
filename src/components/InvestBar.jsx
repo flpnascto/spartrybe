@@ -1,6 +1,7 @@
 // implement SearchBar component here
 import React from 'react';
 import PropTrybes from 'prop-types';
+import '../styles/InvestBar.css'
 
 class InvestBar extends React.Component {
   inputSearch() {
@@ -121,10 +122,12 @@ class InvestBar extends React.Component {
           onSubmit={(event) => event.preventDefault()}
           data-testid="search-bar-form"
         >
-          {this.inputSearch()}
-          {this.selectInvestorType()}
-          {this.category()}
-          {this.timeRange()}
+          <fieldset className="form-container">
+          	{this.inputSearch()}
+          	{this.selectInvestorType()}
+          	{this.category()}
+          	{this.timeRange()}
+          </fieldset>
         </form>
       </div>
     );
