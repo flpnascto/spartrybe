@@ -5,7 +5,7 @@ import Header from './components/Header';
 import InvestLibrary from './components/InvestLibrary';
 
 import Portfolio from './data'
-console.log(Portfolio)
+
 function App() {
   return (
     <div className="App">
