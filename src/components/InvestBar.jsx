@@ -7,7 +7,7 @@ class InvestBar extends React.Component {
   inputSearch() {
     const { nameFilter, onNameChange } = this.props;
     return (
-      <label htmlFor="search-text" data-testid="text-input-label">
+      <label className="form-label" htmlFor="search-text" data-testid="text-input-label">
         Nome:
         <input
           className="xablau"
@@ -25,7 +25,7 @@ class InvestBar extends React.Component {
   selectInvestorType() {
     const { perfilFilter, onCategoryChange } = this.props;
     return (
-      <label htmlFor="select-input" data-testid="select-input-label">
+      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
         Perfil:
         <select
           name="perfil"
@@ -54,7 +54,7 @@ class InvestBar extends React.Component {
   category() {
     const { categoryFilter, onCategoryChange } = this.props;
     return (
-      <label htmlFor="select-input" data-testid="select-input-label">
+      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
         Categoria:
         <select
           name="categoria"
@@ -66,7 +66,7 @@ class InvestBar extends React.Component {
           <option selected value="all" data-testid="select-option">
             Todas
           </option>
-          <option value="renda Fixa" data-testid="select-option">
+          <option value="renda fixa" data-testid="select-option">
             Renda Fixa
           </option>
           <option value="multimercado" data-testid="select-option">
@@ -91,7 +91,7 @@ class InvestBar extends React.Component {
   timeRange() {
     const { horizonteFilter, onCategoryChange } = this.props;
     return (
-      <label htmlFor="select-input" data-testid="select-input-label">
+      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
         Horizonte:
         <select
           name="horizonte"
@@ -134,13 +134,6 @@ class InvestBar extends React.Component {
   }
 }
 
-InvestBar.propTypes = {
-  searchText: PropTrybes.string.isRequired,
-  onSearchTextChange: PropTrybes.func.isRequired,
-  bookmarkedOnly: PropTrybes.bool.isRequired,
-  onBookmarkedChange: PropTrybes.func.isRequired,
-  selectedGenre: PropTrybes.string.isRequired,
-  onSelectedGenreChange: PropTrybes.func.isRequired,
-};
+
 
 export default InvestBar;

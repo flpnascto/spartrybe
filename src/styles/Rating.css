@@ -1,0 +1,19 @@
+.rating {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.fas.fa-star {
+  color: gold;
+  margin-right: 5px;
+}
+
+.fas.fa-user-friends {
+  margin-left: 5px;
+}
