@@ -1,25 +1,43 @@
-.card {
-  background-color: white;
-  border: 2px solid darkgrey;
+.card-list {
   display: flex;
+  flex-basis: 80%;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 10px;
+  justify-content: center;
+}
+
+.card {
+  align-items: flex-start;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.14 ),
+    0 3px 1px -2px rgba( 0, 0, 0, 0.2 ),
+    0 1px 5px 0 rgba( 0, 0, 0, 0.12 );
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 7px;
+  overflow: hidden;
   padding: 10px;
+  width: 250px;
 }
 
 .card-image {
-  font-size: x-large;
-  padding-bottom: 5px;
-  width: 80%;
+  height: 150px;
+  width: 100%;
 }
 
 .card-name {
-  width: 100%;
-  margin: 5px;
+  align-items: flex-start;
+  color: rgba( 0, 0, 0, 0.54 );
+  overflow: hidden;
+  font-weight: bold;
+  margin: 2px 2px 5px 2px;
 }
 
 .card-author {
   font-style: italic;
   padding-bottom: 3px;
+  padding-right: 10px;
+  align-self: flex-end;
 }
