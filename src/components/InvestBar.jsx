@@ -25,8 +25,7 @@ class InvestBar extends React.Component {
   selectInvestorType() {
     const { perfilFilter, onPerfilChange } = this.props;
     return (
-      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
-        Perfil:
+      <div className="box">
         <select
           name="perfil"
           value={perfilFilter}
@@ -35,7 +34,7 @@ class InvestBar extends React.Component {
           data-key="selectedGenre"
         >
           <option selected value="" data-testid="select-option">
-            Todos
+            Perfil:
           </option>
           <option value="conservador" data-testid="select-option">
             Conservador
@@ -47,7 +46,30 @@ class InvestBar extends React.Component {
             Agressivo
           </option>
         </select>
-      </label>
+      </div>
+      // <label className="form-label" htmlFor="select-input" data-testid="select-input-label" >
+      //   Perfil:
+      //   <select
+      //     name="perfil"
+      //     value={perfilFilter}
+      //     onChange={onPerfilChange}
+      //     data-testid="select-input"
+      //     data-key="selectedGenre"
+      //   >
+      //     <option selected value="" data-testid="select-option">
+      //       Perfil:
+      //     </option>
+      //     <option value="conservador" data-testid="select-option">
+      //       Conservador
+      //     </option>
+      //     <option value="moderado" data-testid="select-option">
+      //       Moderado
+      //     </option>
+      //     <option value="agressivo" data-testid="select-option">
+      //       Agressivo
+      //     </option>
+      //   </select>
+      // </label>
     );
   }
 
