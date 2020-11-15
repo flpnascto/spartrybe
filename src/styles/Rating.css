@@ -1,12 +1,11 @@
 .rating {
   display: flex;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  border-bottom: 1px solid  rgb(0, 0, 0, 0.1);
   justify-content: space-around;
-  margin-bottom: 15px;
+  margin: 2px 0px 5px 0px;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 5px 0px;
 }
 
 .fas.fa-star {

@@ -23,7 +23,7 @@ class PortifolioCard extends React.Component {
     return (
       <div className="card" data-testid="card">
         <img alt="cover" className="card-image" src={img} />
-        <h4 data-testid="card-name" className="card-name">{name}</h4>
+        <div data-testid="card-name" className="card-name">{name}</div>
         <Rating rating={rating} />
         <Ranking ranking={ranking} />
         <Aplicar />
