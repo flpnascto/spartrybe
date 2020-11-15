@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Rating from './Rating';
 import Ranking from './Ranking';
+import Aplicar from './Aplicar'
 
 import '../styles/portifolioCard.css'
 
@@ -25,6 +26,7 @@ class PortifolioCard extends React.Component {
         <h4 data-testid="card-name" className="card-name">{name}</h4>
         <Rating rating={rating} />
         <Ranking ranking={ranking} />
+        <Aplicar />
         <div className='card-author'>{author}</div>
       </div>
     );
