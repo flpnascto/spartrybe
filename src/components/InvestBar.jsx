@@ -1,25 +1,22 @@
 // implement SearchBar component here
 import React from 'react';
-import PropTrybes from 'prop-types';
 import '../styles/InvestBar.css'
 
 class InvestBar extends React.Component {
   inputSearch() {
     const { nameFilter, onNameChange } = this.props;
     return (
-      <label className="form-label" htmlFor="search-text" data-testid="text-input-label">
-        Nome:
-        <input
-          className="xablau"
-          type="text"
-          name="name"
-          value={nameFilter}
-          onChange={onNameChange}
-          data-testid="text-input"
-          data-key="searchText"
-        />
-      </label>
-    );
+      <input
+        className="input-box"
+        type="text"
+        name="name"
+        value={nameFilter}
+        onChange={onNameChange}
+        data-testid="text-input"
+        data-key="searchText"
+        placeholder="pesquise o nome"
+      />
+  );
   }
 
   selectInvestorType() {
@@ -76,8 +73,7 @@ class InvestBar extends React.Component {
   category() {
     const { categoryFilter, onCategoryChange } = this.props;
     return (
-      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
-        Categoria:
+      <div className="box">
         <select
           name="categoria"
           value={categoryFilter}
@@ -86,7 +82,7 @@ class InvestBar extends React.Component {
           data-key="selectedGenre"
         >
           <option selected value="" data-testid="select-option">
-            Todas
+            Categorias:
           </option>
           <option value="renda fixa" data-testid="select-option">
             Renda Fixa
@@ -106,15 +102,14 @@ class InvestBar extends React.Component {
             Alternativos
           </option>
         </select>
-      </label>
+      </div>
     );
   }
 
   timeRange() {
     const { horizonteFilter, onHorizonteChange } = this.props;
     return (
-      <label className="form-label" htmlFor="select-input" data-testid="select-input-label">
-        Horizonte:
+      <div className="box">
         <select
           name="horizonte"
           value={horizonteFilter}
@@ -123,7 +118,7 @@ class InvestBar extends React.Component {
           data-key="selectedGenre"
         >
           <option selected value="" data-testid="select-option">
-            Todos
+            Horizonte:
           </option>
           <option value="curto prazo" data-testid="select-option">
             Curto Prazo
@@ -135,7 +130,7 @@ class InvestBar extends React.Component {
             Longo Prazo
           </option>
         </select>
-      </label>
+      </div>
     );
   }
 
