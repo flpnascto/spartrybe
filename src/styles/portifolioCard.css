@@ -17,8 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 10px 7px;
-  overflow: hidden;
-  padding: 10px;
+  /* overflow: hidden; */
   width: 250px;
 }
 
@@ -33,11 +32,12 @@
   overflow: hidden;
   font-weight: bold;
   margin: 2px 2px 5px 2px;
+  padding: 10px;
 }
 
 .card-author {
   font-style: italic;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   padding-right: 10px;
   align-self: flex-end;
 }

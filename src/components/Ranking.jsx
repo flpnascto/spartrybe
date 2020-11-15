@@ -9,10 +9,15 @@ class Ranking extends React.Component {
     return (
       <div className="ranking">
         <div>
-        <i class="fas fa-trophy"></i> <br/>
-          <span className="position">{position} º </span>
+          <span className="position">{position}º </span>
+          <i class="fas fa-trophy"></i>
         </div>
         <div>
+          <i class="far fa-chart-bar fa-lg"></i>
+          {` M ${profitability.oneMonth}% -
+          Y ${profitability.oneYear}%`}
+        </div>
+        {/* <div>
           Rentabilidade (%) <i class="far fa-chart-bar"></i><br/>
           <table className="profit-table">
             <tr className="profit-table-row">
@@ -26,12 +31,10 @@ class Ranking extends React.Component {
               <th>{profitability.oneYear}</th>
             </tr>
           </table>
-        </div>
+        </div> */}
       </div>
     );
   }
 }
-
-
 
 export default Ranking;

@@ -26,9 +26,14 @@ class Aplicar extends React.Component {
     const { valor } = this.state
     return(
       <div className="invest-Container">
-        <label className="invest-label" htmlFor="input-value">
-          <h3>Valor</h3>
-          <input id="input-value" value={this.state.valor} onChange={this.handleChange} className="input-value"  /></label>
+        {/* <label className="invest-label" htmlFor="input-value"> */}
+          <input
+            id="input-value"
+            value={this.state.valor}
+            onChange={this.handleChange}
+            className="input-value"
+            placeholder="R$00,00"/>
+          {/* </label> */}
           <button className="invest-button" disabled={valor <= 0} onClick={this.handleClick}>Investir</button>
       </div>
     )
